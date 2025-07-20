@@ -8,7 +8,11 @@ st.set_page_config(
 )
 
 # Centered logo display
-st.image("logo_loading.png", use_container_width=True)
+import os
+
+current_dir = os.path.dirname(__file__)
+logo_path = os.path.join(current_dir, "logo_loading.png")
+st.image(logo_path, use_container_width=True)
 
 # Optional app title under logo (remove if not needed)
 st.markdown("<h2 style='text-align: center;'>Welcome to ClearedDCT</h2>", unsafe_allow_html=True)
